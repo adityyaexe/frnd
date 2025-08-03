@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Friendship Day! 💕</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Prevent caching during development -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+</head>
+<body>
+  <div class="app-container">
+
+    <!-- Floating Hearts -->
+    <div class="floating-hearts"></div>
+
+    <!-- Floating Cats -->
+    <div class="floating-cats">
+      <div class="floating-cat cat-1">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1754160095/pplx_project_search_images/d8615ba3d47840f86cbbedf5fab7e5b4b8298a42.jpg" alt="Cute cat" loading="lazy" />
+      </div>
+      <div class="floating-cat cat-2">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1754160095/pplx_project_search_images/8c1789deb1044ca9275a3a37a42779653102192b.jpg" alt="Cute cats" loading="lazy" />
+      </div>
+    </div>
+
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="screen">
+      <div class="welcome-content">
+        <div class="main-title-container">
+          <h1 class="main-title">Happy Friendship Day!</h1>
+          <div class="subtitle">To My Girlfriend & Best Friend 💕</div>
+        </div>
+
+        <div class="welcome-cats">
+          <img src="https://pplx-res.cloudinary.com/image/upload/v1754160095/pplx_project_search_images/4d188168bc31bf22273f892799fc908a9dc07655.jpg" alt="Cute friendship cats" class="main-cat-image" loading="lazy" />
+        </div>
+
+        <button class="btn btn--primary btn--lg start-btn" onclick="startQuiz()">
+          Start Our Quiz! 🎉
+        </button>
+      </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="screen hidden">
+      <div class="quiz-header">
+        <div class="progress-container">
+          <div class="progress-text">
+            Question <span id="current-question">1</span> of <span id="total-questions">6</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-content">
+        <div class="question-card" id="question-card">
+          <div class="question-text" id="question-text">Loading...</div>
+          <div class="answer-buttons">
+            <button class="btn btn--primary btn--lg answer-btn yes-btn" onclick="answerQuestion(true)">
+              Yes! 💖
+            </button>
+            <button class="btn btn--secondary btn--lg answer-btn no-btn" onclick="answerQuestion(false)">
+              No 🙈
+            </button>
+          </div>
+        </div>
+
+        <!-- Reaction Animation -->
+        <div class="reaction-animation" id="reaction-animation">
+          <div class="reaction-emoji" id="reaction-emoji">😻</div>
+          <div class="reaction-text" id="reaction-text">Meow!</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Celebration Screen -->
+    <div id="celebration-screen" class="screen hidden">
+      <div class="celebration-content">
+        <h1 class="celebration-title">You're Amazing! 🎉</h1>
+        <div class="celebration-message">
+          <p>Thank you for being my girlfriend AND my best friend! 💕</p>
+          <p>Every question reminded me why I love you so much! 🐱✨</p>
+          <p>Here's to many more friendship days together! 🌸</p>
+        </div>
+
+        <div class="celebration-stats">
+          <div class="stat-item">
+            <div class="stat-number" id="yes-count">0</div>
+            <div class="stat-label">Yes Answers 💖</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" id="no-count">0</div>
+            <div class="stat-label">No Answers 🙈</div>
+          </div>
+        </div>
+
+        <div class="celebration-cats">
+          <img src="https://pplx-res.cloudinary.com/image/upload/v1754160095/pplx_project_search_images/78fe4831b5b231b0e72c53241da08135e9055dba.jpg" alt="Happy friendship cats" class="celebration-cat-image" loading="lazy" />
+        </div>
+
+        <div class="celebration-buttons">
+          <button class="btn btn--primary btn--lg" onclick="restartQuiz()">
+            Play Again! 🔄
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
