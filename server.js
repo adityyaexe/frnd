@@ -16,7 +16,9 @@ const corsOptions = {
       'http://localhost:5173',
       'http://127.0.0.1:5173',
       'http://localhost:5000',
-      'http://127.0.0.1:5000'
+      'http://127.0.0.1:5000',
+      'https://tomqanda.netlify.app' // <-- ADD your Netlify domain here!
+
     ];
 
     // Allow development (no origin = file://)

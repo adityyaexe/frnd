@@ -257,14 +257,14 @@ function showCelebration() {
   // Statistic: count only MCQ option answers resembling positive/negative for fun
   // But, for open answers/multiple option, you may skip stats or show "Submitted!"
   let yesCount = 0, noCount = 0;
-  answers.forEach(({answer}) => {
-    if(typeof answer === "string" && (
+  answers.forEach(({ answer }) => {
+    if (typeof answer === "string" && (
       answer.toLowerCase().includes("yes") ||
       answer.toLowerCase().includes("hu") || // fun guess
       answer.includes("pyaara") || answer.includes("zarur") || answer.includes("made my day"))) {
       yesCount++;
     }
-    else if(typeof answer === 'string' && (
+    else if (typeof answer === 'string' && (
       answer.toLowerCase().includes("nahi") ||
       answer.toLowerCase().includes("no option")
     )) {
@@ -333,7 +333,7 @@ function createCelebrationExplosion(emoji) {
 
 // Save answers (for use with MongoDB/Express backend)
 async function saveAnswersToServer(answers) {
-  const API_URL = 'http://localhost:5000/api/submit';
+  const API_URL = 'https://frnd-67gg.onrender.com/api/submit';
   try {
     const response = await fetch(API_URL, {
       method: 'POST',
